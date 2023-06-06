@@ -10,9 +10,11 @@ export default function ChatRoom(){
     useEffect(() => {
         console.log('effect called');
          const connection = CreateConnection(roomId);
+        
          connection.connect();
         return () =>{
            connection.disconnect();
+          
         }
     },[roomId])
 

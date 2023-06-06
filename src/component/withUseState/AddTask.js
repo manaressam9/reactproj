@@ -18,13 +18,25 @@ export default function AddTask() {
         }
     ])
    }
+
+   function editTaskHandler(editedTask){
+   let editedTasks= taskList.map(task => {
+       if(task.ID === editedTask.ID){
+        return editedTask;
+       }else{return task;}
+   })
+   setTaskList(editedTasks);
+   }
+   function deleteTaskHandler(taskID){
+    setTaskList(taskList.filter(t => t.ID !== taskID));
+   }
     return (
         <>
             <input type='text' placeholder="Add task"
              value ={taskTitle} onChange={e => setTaskTitle(e.target.value)}/>
-             <button onClick={addNewTaskHandler}>Add</button>
+             <button onClick={() => {setTaskTitle(''); addNewTaskHandler();}}>Add</button>
              <div className="p-2">
-                <TaskList taskList={taskList}  />
+                <TaskList taskList={taskList} onEdit={editTaskHandler} onDelete={deleteTaskHandler}/>
              </div>
         </>
     );

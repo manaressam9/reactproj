@@ -1,16 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import Task from "./Task";
-export default function TaskList({taskList}){
- function editTaskHandler(){}
- function deleteTaskHandler(){}
+export default function TaskList({taskList, onEdit, onDelete}){
+
   if(taskList.length !==0){
     return(
         <>
         <ul>
             {taskList.map(task => (
                 <li key={task.ID}>
-                    <Task task={task} onEdit={editTaskHandler} onDelete={deleteTaskHandler} />
+                    <Task task={task} onEdit={onEdit} onDelete={onDelete} />
                 </li>
             ) )}
         </ul>

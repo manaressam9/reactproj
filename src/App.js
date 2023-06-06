@@ -1,6 +1,7 @@
 import React from "react";
 //import Game from "./component/Game";
-import AddTask from "./component/withUseState/AddTask";
+// import AddTask from "./component/withUseState/AddTask";
+import AddTask from "./component/withReducer/AddTask";
 const App = () =>{
     return (
        <div className="container">

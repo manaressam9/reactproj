@@ -1,6 +1,7 @@
 import React from "react";
-import PointerMove from "./component/useEffectExample/PointerMove";
-import Counter from "./component/useEffectExample/Counter";
+import Counter from "./component/usRefExample/Counter";
+// import PointerMove from "./component/useEffectExample/PointerMove";
+// import Counter from "./component/useEffectExample/Counter";
 // import Game from "./component/Game";
 // import AddTask from "./component/withUseState/AddTask";
 // import AddTask from "./component/withReducer/AddTask";
@@ -21,10 +22,12 @@ const App = () => {
          </h1>
          <ChatRoom /> */}
 
-         <h1 className="text-center ">
+         {/* <h1 className="text-center ">
             Pointer Move
          </h1>
          <PointerMove />
+         <Counter /> */}
+
          <Counter />
       </div>
    )

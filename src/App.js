@@ -1,7 +1,8 @@
 import React from "react";
-import Counter from "./component/usRefExample/Counter";
+//import Counter from "./component/usRefExample/Counter";
+import StopWatch from "./component/usRefExample/StopWatch";
 // import PointerMove from "./component/useEffectExample/PointerMove";
-// import Counter from "./component/useEffectExample/Counter";
+import Counter from "./component/useEffectExample/Counter";
 // import Game from "./component/Game";
 // import AddTask from "./component/withUseState/AddTask";
 // import AddTask from "./component/withReducer/AddTask";
@@ -29,6 +30,7 @@ const App = () => {
          <Counter /> */}
 
          <Counter />
+         <StopWatch />
       </div>
    )
 }

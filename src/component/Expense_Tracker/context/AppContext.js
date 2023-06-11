@@ -17,6 +17,12 @@ switch(action.type){
             expenses: state.expenses.filter(expense => expense.id !== action.payload),
         }
     }
+    case 'edit_budget':{
+        return{
+            ...state,
+            budget: action.payload,
+        }
+    }
     default:{
         return state;
     }

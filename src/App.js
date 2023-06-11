@@ -3,6 +3,7 @@ import Budget from "./component/Expense_Tracker/Budget";
 import Remaining from "./component/Expense_Tracker/Remaining";
 import Spent from "./component/Expense_Tracker/Spent";
 import ExpenseSearch from "./component/Expense_Tracker/ExpenseSearch";
+import AddExpense from "./component/Expense_Tracker/AddExpense";
 
 const App = () => {
    return (
@@ -16,7 +17,9 @@ const App = () => {
         <div className="row mt-3">
          <ExpenseSearch />
         </div>
-
+        <div className="row mt-3">
+         <AddExpense/>
+        </div>
       </div>
    )
 }

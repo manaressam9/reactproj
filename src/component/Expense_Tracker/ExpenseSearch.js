@@ -14,7 +14,20 @@ const ExpenseSearch = () => {
                 <input className="form-control" type="text" placeholder="type to search" />
             </div>
             <div className="mt-2 px-2">
-            
+            <ul className="list-group">
+            {ExpensesList.map(expense => (
+                <li key={expense.id} className="list-group-item d-flex justify-content-between align-items-center">
+                    {expense.name}
+                    <div>
+                    <span className=" badge bg-primary rounded-pill mr-3">
+                    {expense.cost} 
+                        </span>
+                       
+                        <i className="bi bi-trash"></i>
+                    </div>
+                </li>
+            ))}
+            </ul>
             </div>
         </>
     );

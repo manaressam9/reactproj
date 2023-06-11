@@ -8,7 +8,7 @@ const ExpenseSearch = () => {
         { id: 13, name: 'holiday', cost: 400 },
         { id: 14, name: 'car service', cost: 50 },
     ];*/
-
+   
     const { expenses, dispatch } = useContext(AppContext);
     const [filteredResult, setFilteredResult] = useState(expenses || []);
     const [searchVal, setSearchVal] = useState('');
@@ -38,7 +38,7 @@ const ExpenseSearch = () => {
                 <button className="btn btn-primary" onClick={searchExpenses}>Search</button>
             </div>
             <div className="mt-2 px-2">
-                <ul className="list-group">
+                <ul className="list-group" style={{height:"100px", overflowY: "scroll",}}> 
                     {filteredResult.map(expense => (
                         <li key={expense.id} className="list-group-item d-flex justify-content-between align-items-center">
                             {expense.name}

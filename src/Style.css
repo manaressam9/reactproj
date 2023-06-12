@@ -16,3 +16,11 @@
     display: flex;
     justify-content: center;
 }
+.panel-dark {
+    background-color: rgb(15, 14, 15);
+   color:white;
+}
+.panel-light {
+    background-color: rgb(238, 238, 238);
+   color:rgb(17, 17, 17);
+}

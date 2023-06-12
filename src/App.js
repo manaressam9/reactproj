@@ -1,14 +1,16 @@
 import React from "react";
-import Budget from "./component/Expense_Tracker/Budget";
-import Remaining from "./component/Expense_Tracker/Remaining";
-import Spent from "./component/Expense_Tracker/Spent";
-import ExpenseSearch from "./component/Expense_Tracker/ExpenseSearch";
-import AddExpense from "./component/Expense_Tracker/AddExpense";
-import { AppProvider } from "./component/Expense_Tracker/context/AppContext";
-
+import { AppProvider } from "./component/useContextExample/ThemeContext";
+import Panel from "./component/useContextExample/Panel";
+// import Budget from "./component/Expense_Tracker/Budget";
+// import Remaining from "./component/Expense_Tracker/Remaining";
+// import Spent from "./component/Expense_Tracker/Spent";
+// import ExpenseSearch from "./component/Expense_Tracker/ExpenseSearch";
+// import AddExpense from "./component/Expense_Tracker/AddExpense";
+// import { AppProvider } from "./component/Expense_Tracker/context/AppContext";
 const App = () => {
    return (
-      <AppProvider>
+      <>
+       {/* <AppProvider>
          <div className="container">
        <h1 className="text-center mt-5">My Expenses Planner</h1>
         <div className="row mt-3">
@@ -23,7 +25,12 @@ const App = () => {
          <AddExpense/>
         </div>
       </div>
-      </AppProvider>
+      </AppProvider>  */}
+
+    <AppProvider>
+      <Panel />
+    </AppProvider>
+      </>
    )
 }
 

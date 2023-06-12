@@ -6,12 +6,8 @@ export const ThemeContext = createContext();
 export const AppProvider = (props) => {
 const [theme, setTheme] = useState('theme');
  return(
-    <ThemeContext.Provider value={theme}>
-     <label>
-        <input type="checkbox" checked={theme === 'dark'} 
-        onChange={e => setTheme(e.target.checked? 'dark': 'light')}/>
-        {' '}use dark mode
-     </label>
+    <ThemeContext.Provider value={{theme,setTheme}}>
+     
       {props.children}
     </ThemeContext.Provider>
  );
